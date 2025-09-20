@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { PWAInitializer } from '@/components/PWAInitializer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -39,6 +40,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Drink Builder" />
       </head>
       <body className={inter.className}>
+        <PWAInitializer />
         <div className="min-h-screen bg-gradient-to-br from-coffee-50 to-cream-50">
           {children}
         </div>
